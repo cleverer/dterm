@@ -38,7 +38,7 @@
 
 + (NSArray*)argumentsToRunCommand:(NSString*)command {
 	NSString* shell = [[DTRunManager shellPath] lastPathComponent];
-	if([shell isEqualToString:@"bash"] || [shell isEqualToString:@"sh"])
+	if([shell isEqualToString:@"bash"] || [shell isEqualToString:@"sh"] || [shell isEqualToString:@"zsh"])
 		return @[@"-l", @"-i", @"-c", command];
 	else
 		return @[@"-i", @"-c", command];
